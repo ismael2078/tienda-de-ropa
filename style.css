@@ -1,0 +1,111 @@
+/* 
+   Boutique Maricruz - Hoja de Estilos Principal
+   Diseño clásico para catálogos y sistemas corporativos
+   Educativo: Comentarios totalmente traducidos al español para mayor comprensión en clase de sistemas.
+*/
+
+:root {
+    /* Variables de Color (Paleta Sofisticada) */
+    --gold: #c5a059;
+    /* Color Dorado */
+    --navy: #1a2a44;
+    /* Color Azul Marino Fuerte */
+    --light-bg: #ffffff;
+    /* Color Blanco Puro */
+    --soft-bg: #f8f9fa;
+    /* Color Gris Claro (Para sombras suaves) */
+    --text-main: #333333;
+    /* Color Gris Oscuro para Texto Normal */
+}
+
+/* 
+   ESTILOS GENERALES 
+   Uso de tipografías presentes por defecto en todos los sistemas operativos,
+   muy usado en sistemas corporativos en Bolivia (Windows).
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 
+   TIPOGRAFÍA PARA TÍTULOS 
+   Usamos Times New Roman para darle elegancia a la Boutique.
+*/
+h1,
+h2,
+h3,
+h4,
+.font-serif {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+    /* El estilo clásico suele usar trazados gruesos, se ajusta con Tailwind */
+}
+
+/* 
+   TIPOGRAFÍA PARA TEXTO CORRIENTE (Párrafos, descripciones pequeñas) 
+   Mantenemos Arial o sans-serif por legibilidad.
+*/
+.font-sans,
+p,
+a,
+button {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --- CLASES DEL ENRUTAMIENTO VIRTUAL (SPA) --- */
+/* Las secciones del HTML necesitan una altura mínima inicial */
+.page-section {
+    min-height: 80vh;
+    /* Ocupa al menos el 80% del alto de la ventana del navegador */
+}
+
+/* --- ANIMACIONES DE APARICIÓN AL HACER SCROLL (Revelado) --- */
+/* Esta clase se encarga de dejar el contenedor casi transparente al inicio y más abajo. */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+    /* Transición suave de 0.8 segundos */
+}
+
+/* Cuando Javascript detecta que el objeto es visible en pantalla, añade esta clase ".active" */
+.reveal.active {
+    opacity: 1;
+    /* Vuelve a ser totalmente sólido */
+    transform: translateY(0);
+    /* Se mueve a su lugar original */
+}
+
+/* --- CLASES PARA BOTONES EXCLUSIVOS --- */
+.btn-primary {
+    background-color: var(--navy);
+    color: white;
+    padding: 12px 24px;
+    border: 1px solid var(--navy);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Transición al posicionar el mouse sobre el botón (Efecto Hover) */
+.btn-primary:hover {
+    background-color: transparent;
+    /* El fondo desaparece */
+    color: var(--navy);
+    /* El texto queda del color original del fondo */
+}
+
+/* 
+    AYUDAS PARA DEPURACIÓN EN DESARROLLO (Clase Estudiantil)
+    * Usa "class='debug-border'" en tu código HTML en caso de que quieras visualizar las cajas o contenedores cuando estudies
+*/
+.debug-border {
+    border: 1px solid red;
+}
