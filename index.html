@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <!-- Archivo Externo de Javascript -->
+  <script src="js/script.js"></script>
+
+  <title>Boutique Maricruz | Elegancia Clásica</title>
+  <!-- Tailwind CSS (Framework de diseño rápido) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Iconos Vectoriales -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <!-- Estilo Externo -->
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#c5a059',
+            navy: '#1a2a44',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="antialiased">
+
+  <!-- CABECERA DE NAVEGACIÓN (Header) -->
+  <header class="sticky top-0 z-50 w-full bg-white border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Enlaces del Menú -->
+      <nav class="hidden md:flex gap-8 text-[11px] uppercase tracking-widest font-bold text-gray-500 font-sans">
+        <a href="#inicio" onclick="window.navigateTo('inicio')" class="hover:text-gold transition-colors">Inicio</a>
+        <a href="#coleccion" onclick="window.navigateTo('coleccion')"
+          class="hover:text-gold transition-colors">Colección</a>
+        <a href="#nosotros" onclick="window.navigateTo('nosotros')" class="hover:text-gold transition-colors">La
+          Boutique</a>
+      </nav>
+
+      <!-- Título / Logotipo -->
+      <div class="text-center">
+        <h1 class="text-2xl md:text-3xl tracking-[0.15em] uppercase font-serif text-navy font-bold">Boutique <span
+            class="text-gold">Maricruz</span></h1>
+      </div>
+
+      <!-- Espacio Vacío a la Derecha (Carrito removido por diseño) -->
+      <div class="flex items-center gap-5 w-[100px]"></div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <!-- SECCIÓN: INICIO (Portada) -->
+    <section id="inicio" class="page-section">
+      <div class="relative h-[80vh] overflow-hidden bg-gray-100">
+        <img src="img/hero.jpg" alt="Portada Boutique Maricruz" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-navy/10 flex flex-col items-center justify-center text-center px-4">
+          <h2 class="text-5xl md:text-7xl text-white font-serif italic mb-6 shadow-sm">Primavera elegante 2026</h2>
+          <p class="text-white text-lg mb-10 max-w-xl font-sans">Descubre la selección exclusiva para la mujer
+            contemporánea que valora la distinción.</p>
+          <button onclick="window.navigateTo('coleccion')" class="btn-primary">Ver Nueva Colección</button>
+        </div>
+      </div>
+
+      <!-- Texto Descriptivo Inferior -->
+      <div class="py-24 bg-white text-center reveal">
+        <div class="max-w-2xl mx-auto px-6">
+          <h3 class="text-3xl text-navy mb-6 italic font-serif">Exclusividad en cada detalle</h3>
+          <p class="text-gray-600 text-lg mb-8 leading-relaxed font-sans">
+            En Boutique Maricruz, nos dedicamos a ofrecer prendas de alta calidad para quienes buscan un estilo
+            sofisticado y un trato personalizado. Nuestra curaduría refleja la elegancia clásica con toques modernos.
+          </p>
+          <div class="w-16 h-px bg-gold mx-auto mb-8"></div>
+          <button onclick="window.navigateTo('nosotros')"
+            class="text-gold uppercase text-[10px] tracking-widest font-bold border-b border-gold pb-1 hover:text-navy hover:border-navy transition-all">Nuestra
+            Historia</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: COLECCIÓN DE PRODUCTOS -->
+    <section id="coleccion" class="page-section hidden py-20 px-6 max-w-7xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-4xl text-navy font-serif italic mb-4">Piezas Destacadas</h2>
+        <p class="text-gray-500 font-sans">Seleccionadas cuidadosamente para nuestra distinguida clientela.</p>
+      </div>
+
+      <!-- Grilla Principal de Categorías -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+        <!-- Categoría 1: Vestidos de Gala -->
+        <div class="reveal group">
+          <div class="aspect-[3/4] overflow-hidden rounded-sm bg-gray-50 border border-gray-100 mb-6 relative">
+            <img src="img/product-1.jpg" alt="Exhibición de Vestidos de Gala"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <h4 class="text-xl text-navy mb-1 italic font-serif">Vestidos de Gala</h4>
+          <p class="text-gray-600 text-sm font-sans">Diseños exclusivos en seda y telas premium.</p>
+        </div>
+
+        <!-- Categoría 2: Sacos (Imágenes nuevas a incluir) -->
+        <div class="reveal group">
+          <div class="aspect-[3/4] overflow-hidden rounded-sm bg-gray-50 border border-gray-100 mb-6 relative">
+            <img src="img/saco_elegante.png" alt="Exhibición de Sacos Alta Costura"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <h4 class="text-xl text-navy mb-1 italic font-serif">Sacos</h4>
+          <p class="text-gray-600 text-sm font-sans">Corte sastre perfecto para cualquier ocasión.</p>
+        </div>
+
+        <!-- Categoría 3: Carteras (Imágenes nuevas a incluir) -->
+        <div class="reveal group">
+          <div class="aspect-[3/4] overflow-hidden rounded-sm bg-gray-50 border border-gray-100 mb-6 relative">
+            <img src="img/cartera_cuero.png" alt="Exhibición de Carteras de Cuero"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <h4 class="text-xl text-navy mb-1 italic font-serif">Carteras</h4>
+          <p class="text-gray-600 text-sm font-sans">Accesorios de cuero importado de alta gama.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN: SOBRE NOSOTROS -->
+    <section id="nosotros" class="page-section hidden py-24 px-6 bg-gray-50">
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-16">
+        <div class="md:w-1/2 reveal">
+          <img src="img/silk-about.jpg" alt="Interior Boutique" class="rounded-lg shadow-xl">
+        </div>
+        <div class="md:w-1/2 space-y-6 reveal text-left">
+          <h2 class="text-4xl text-navy font-serif italic">Bienvenida a Maricruz</h2>
+          <p class="text-gray-600 leading-relaxed font-sans">
+            Fundada con el objetivo de traer la moda más exclusiva de las capitales directamente a tu armario.
+            Entendemos que la ropa es una extensión de la personalidad y por eso ofrecemos asesoramiento de imagen
+            personalizado.
+          </p>
+          <p class="text-gray-600 font-sans">
+            Nuestra boutique es un refugio de paz y buen gusto para quienes valoran la calidad por encima de todo.
+            Visítanos y descubre prendas atemporales.
+          </p>
+          <div class="pt-6">
+            <span class="text-gold font-serif italic text-xl">Maricruz Romero </span>
+            <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold font-sans">Directora Creativa</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA COMÚN (Footer) -->
+  <footer class="bg-navy text-white py-20 mt-20">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+      <!-- Columna: Información de Marca -->
+      <div class="space-y-6">
+        <h2 class="text-2xl tracking-widest font-serif font-bold">Boutique <span class="text-gold">Maricruz</span></h2>
+        <p class="text-gray-400 text-sm leading-relaxed max-w-xs font-sans">Elegancia y distinción para momentos
+          inolvidables. Expertos en moda de clase alta desde 2000.</p>
+      </div>
+      <!-- Columna: Menú de Acceso Rápido -->
+      <div class="space-y-4">
+        <h4 class="text-[11px] uppercase tracking-[0.2em] font-bold text-gold font-sans">Mapa del Sitio</h4>
+        <ul class="text-sm space-y-3 text-gray-300 font-sans">
+          <li><a href="#inicio" onclick="window.navigateTo('inicio')"
+              class="hover:text-white transition-colors">Inicio</a></li>
+          <li><a href="#coleccion" onclick="window.navigateTo('coleccion')"
+              class="hover:text-white transition-colors">Colección</a></li>
+          <li><a href="#nosotros" onclick="window.navigateTo('nosotros')" class="hover:text-white transition-colors">La
+              Boutique</a></li>
+        </ul>
+      </div>
+      <!-- Columna: Teléfonos y Direcciones -->
+      <div class="space-y-4">
+        <h4 class="text-[11px] uppercase tracking-[0.2em] font-bold text-gold font-sans">Contacto</h4>
+        <ul class="text-sm space-y-3 text-gray-300 font-sans">
+          <li>contacto@maricruz.es</li>
+          <li>+591 71234567</li>
+          <li>C/ Mexico entre Ballivian y España, No 45 - Cochabamba</li>
+        </ul>
+      </div>
+      <!-- Columna: Redes Sociales -->
+      <div class="space-y-4">
+        <h4 class="text-[11px] uppercase tracking-[0.2em] font-bold text-gold font-sans">Síguenos</h4>
+        <div class="flex gap-4 font-sans">
+          <a href="#" class="hover:text-gold transition-colors">Instagram</a>
+          <a href="#" class="hover:text-gold transition-colors">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <!-- Derechos de Autor -->
+    <div class="pt-10 text-center text-gray-400 text-xs uppercase tracking-widest font-sans">
+      © 2026 Boutique Maricruz. Todos los derechos reservados.
+    </div>
+  </footer>
+</body>
+
+</html>
